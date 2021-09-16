@@ -22,6 +22,10 @@ body
     height: 100vh;
     /*font-family: ;*/
 }
+p
+{
+    color: crimson;
+}
 header
 {
     padding: 40px 50px;

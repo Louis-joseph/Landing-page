@@ -6,22 +6,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body {
+            background: #000;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+            padding: 40px 50px;
+        }
+
+        header .logo {
+            float: left;
+        }
+
+        header .menu {
+            float: right;
+        }
+
+        header .menu ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        header .menu ul li:last-child {
+            margin-right: 0;
+
+        }
+
+        header .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all ease 0.5s;
+        }
+
+        header .menu ul li a:hover {
+            color: #fff700;
+        }
+
+        /*Header Button*/
+        header .menu ul li.btn a {
+            background-color: #fff700;
+            color: #000;
+            padding: 14px 27px;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        header .menu ul li.btn a:hover {
+            border-radius: 15px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        /*Container*/
+        .home .container {
+            max-width: 1266px;
+            margin: 0 auto;
+        }
+
+        /*Ma geule en images*/
+        .home .person {
+            float: right;
+            margin: 70px 180px 0;
+            position: relative;
+            border-radius: 70px 0 70px 0;
+            overflow: hidden;
+        }
+
+        .home .person img {
+            filter: brightness(1.5);
+        }
+
+        .home .person-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #525252;
+            z-index: 99;
+        }
+
+        /*Text*/
+        .home-text {
+            color: #fff;
+            margin-top: 220px;
+            position: absolute;
+        }
+
+        .home-text h6 {
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .home-text h1 {
+            text-transform: uppercase;
+            font-size: 100px;
+            color: #fff;
+        }
+
+        .home-text p {
+            max-width: 500px;
+            font-size: 16px;
+            margin-top: 230px;
+            color: #fff;
+        }
+
+        .home-text .name span {
+            margin-right: 130px;
+            display: inline-block;
+        }
+
+        .home-text .name span:last-child {
+            margin-right: 0;
+        }
+
+        /*Default State Hide */
+        .home .person img,
+        .student span,
+        .name span {
+            opacity: 0;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <div class="wrapper">
         <header>
-            <div class="logo">
-                <!-- <img src="img/Krabs.png" alt=""> -->
-            </div>
 
             <div class="menu">
                 <ul>
                     <li><a href="projects.php">Mes Projets</a></li>
-                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="skills.php">Mes compétences</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li class="btn"><a href="./Espace admin/login.php">Admin</a></li>
                 </ul>
             </div>
@@ -35,8 +166,6 @@
                 <div class="home-text">
                     <h6 class="student">Dévellopeur Web</h6>
                     <h1 class="name">Louis'Jo</h1>
-                    <!-- <h1 class="name" id="uis">uis</h1>
-                    <h1 class="name">Jo</h1> -->
                     <p class="small-intro"> Hello, je suis Louis-Joseph Nonone<br />
                         j'ai 28 ans et j'ai la chance d'être passionné par mon métier, mais je laisse aussi mon attention graviter autour de l'espace, du sport et des aventures entrepreunariales. </p>
                 </div>
@@ -111,13 +240,6 @@
                 }],
                 easing: 'esaseInOutExpo',
                 delay: 8000,
-            })
-            //LOGO
-            anime({
-                targets: '.logo',
-                opacity: 1,
-                duration: 3000,
-                delay: 9500
             })
             //MENU
             anime({

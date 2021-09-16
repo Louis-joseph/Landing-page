@@ -1,0 +1,15 @@
+html
+{
+  --green: #54e6af;
+  --lightGreen: #b3ffe2;
+  --mustardyellow: #F9E13D;
+  --darkGray: #121725;
+  --lightGray: #5a668a;
+  --lightestGray: #c2cbe5;
+}
+body
+{
+    background: var(--mustardyellow);
+    height: 100vh;
+    /*font-family: ;*/
+}
